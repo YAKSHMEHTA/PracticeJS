@@ -58,6 +58,10 @@ const quizQuestions = [
   },
 ];
 
+let currentQuestionIndex = 0;
+let score = 0;
+let answerDiabled = false;
+
 start.addEventListener("click", () => {
   quizscreen.style.display = "block";
   startscreen.style.display = "none";
@@ -72,9 +76,7 @@ function startQuiz() {
   showQuestion();
 }
 
-let currentQuestionIndex = 0;
-let score = 0;
-let answerDiabled = false;
+
 
 
 function showQuestion() {
@@ -82,7 +84,7 @@ function showQuestion() {
   const currentQuestion = quizQuestions[currentQuestionIndex];
   questionText.textContent = currentQuestion.question;
   const progressPercent = (currentQuestionIndex / quizQuestions.length) * 100;
-  progressBar.style.width = progressPercent + "%";
+  progressBar.style.width = progressPercent + "px";
   answercontainer.innerHTML = "";
   currentQuestionel.textContent = currentQuestionIndex+1
 
@@ -127,7 +129,6 @@ function showResult() {
     resultScreen.style.display = "none";
     quizscreen.style.display = "block";
     startscreen.style.display = "none";
-
     startQuiz();
   });
 }
