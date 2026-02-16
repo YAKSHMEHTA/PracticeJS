@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🧩 Sudoku Solver</h1>
+        <p class="subtitle">Enter your puzzle and click Solve!</p>
+        
+        <div class="sudoku-grid" id="sudokuGrid"></div>
+        
+        <div class="controls">
+            <button class="btn-primary" onclick="solveSudoku()">Solve</button>
+            <button class="btn-secondary" onclick="clearGrid()">Clear</button>
+            <button class="btn-success" onclick="validateGrid()">Validate</button>
+        </div>
+
+        <div class="message" id="message"></div>
+
+        <div class="examples">
+            <h3>Try an example:</h3>
+            <button class="btn-secondary" onclick="loadExample('easy')">Easy</button>
+            <button class="btn-secondary" onclick="loadExample('medium')">Medium</button>
+            <button class="btn-secondary" onclick="loadExample('hard')">Hard</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
