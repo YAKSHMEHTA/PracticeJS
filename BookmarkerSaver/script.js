@@ -8,7 +8,17 @@ submitButtom.addEventListener("click",(e)=>{
     let url = bookmarkUrl.value;
 
     let li = document.createElement("li");
-    li.id = "bookmark-list";
-    container.appendChild(li)
+    let a = document.createElement("a");
+    let button = document.createElement("button");
+    button.textContent = "DELETE";
+    a.textContent = name;
+    a.href = url
+    button.addEventListener("click", () => {
+    li.remove();
+        });
+    li.appendChild(a);
+    li.appendChild(button);
+    
+    container.appendChild(li);
 
 })
