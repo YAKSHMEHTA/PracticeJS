@@ -5,6 +5,7 @@ const usmall = document.getElementById("usmall")
 const psmall = document.getElementById("psmall")
 const passwordInput = document.getElementById("password")
 const confirm = document.getElementById("confirmPassword")
+const form = document.getElementById("registration-form")
 
 let email = ""
 let username = ""
