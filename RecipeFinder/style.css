@@ -298,3 +298,25 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
+#meals{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-inline: auto;
+}
+
+.image-container{
+  height: 50%;
+  width: 100%;
+}
+
+.meal-container img{
+  height: 40%;
+
+}
+
+.meal-container{
+  overflow: hidden;
+  height: 50%;
+  padding-inline: auto;
+}
